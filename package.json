@@ -1,0 +1,39 @@
+{
+  "name": "@authorityprompt/chatgpt-app",
+  "version": "0.1.0",
+  "description": "ChatGPT App starter for AuthorityPrompt verified company truth.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "chatgpt-app",
+    "openai-apps-sdk",
+    "mcp",
+    "authorityprompt",
+    "verified-company-data"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "undici": "^6.21.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  },
+  "license": "UNLICENSED"
+}
