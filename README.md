@@ -64,6 +64,33 @@ GET /health
 GET /.well-known/ai-plugin.json
 ```
 
+## Cloudflare Worker deployment
+
+This repo includes a dependency-free Worker entry at:
+
+```text
+cloudflare/worker.js
+```
+
+It can be deployed to:
+
+```text
+https://chatgpt.authorityprompt.com/mcp
+```
+
+The Worker implements:
+
+- `GET /health`
+- `GET /.well-known/ai-plugin.json`
+- `POST /mcp`
+- MCP `initialize`
+- MCP `tools/list`
+- MCP `tools/call`
+- MCP `resources/list`
+- MCP `resources/read`
+
+Use this Worker when you want the fastest public HTTPS connector without provisioning a separate Node host.
+
 ## Deployment
 
 Deploy this app as a public HTTPS service. Configure ChatGPT Apps submission / connector setup to use:
